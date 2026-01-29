@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python src/train.py
+    deps:
+    - path: data/raw/IMDB Dataset.csv
+      hash: md5
+      md5: 308443a50e5c993e7b8a1cdb95750026
+      size: 66212309
+    - path: src/train.py
+      hash: md5
+      md5: 835144dd581d112bb7dd01da0eef7b43
+      size: 355
+    params:
+      params.yaml:
+        train.batch_size: 32
+        train.epochs: 3
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: b4b941359c860f4d5b65f45c0df6980e
+      size: 583

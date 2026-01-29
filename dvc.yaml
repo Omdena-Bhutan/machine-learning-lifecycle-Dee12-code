@@ -1,0 +1,11 @@
+stages:
+  train_model:
+    cmd: python src/train.py
+    deps:
+    - data/raw/IMDB Dataset.csv
+    - src/train.py
+    params:
+    - train.batch_size
+    - train.epochs
+    outs:
+    - models/model.pkl
