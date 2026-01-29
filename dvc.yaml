@@ -1,0 +1,8 @@
+dvc stage add ^
+  -n train_model ^
+  -d src/train.py ^
+  -d data/raw/IMDB Dataset.csv ^
+  -o models/model.pkl ^
+  -p train.epochs,train.batch_size ^
+  python src/train.py
+

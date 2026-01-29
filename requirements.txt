@@ -1,0 +1,11 @@
+pandas
+python
+docker
+seaborn
+flask
+matplotlib
+scikit-learn
+mlflow
+sqlalchemy
+numpy
+dvc
